@@ -1,5 +1,5 @@
 # Algorithms & Data structures course
-congrats, u found my repo
+congrats, u found my repo!
 
 
 █▀▀▄░░░░░░░░░░░▄▀▀█  
