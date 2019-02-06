@@ -94,7 +94,7 @@ int main()
 	                  { 14, 13, 12, 11 },
 	                  { 15, 9, 22, 21 },
 	                  { 16, 17, 19, 20 } };
-	
+
 	std::cout << "1D peak" << std::endl;
 	mtime(findpeak1D, data, 0, size-1);
 	std::cout << std::endl << "2D peak" << std::endl;
