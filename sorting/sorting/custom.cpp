@@ -20,10 +20,13 @@ int* getradomarray(int x)
 
 float mtime(void(*f)(int*, int), int *arr, int l)
 {
-	int init = clock();
+	time_t init = clock();
 	(*f)(arr, l);
+	float finish = ((float)(clock() - init) / CLOCKS_PER_SEC);
+	
+	printf("\a");
 
-	return ((float)(clock() - init) / CLOCKS_PER_SEC);
+	return finish;
 }
 
 void swap(int &a, int &b)
