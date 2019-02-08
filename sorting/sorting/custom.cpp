@@ -35,8 +35,25 @@ void swap(int &a, int &b)
 
 void printarr(int *arr, int l)
 {
+	std::cout << std::endl;
 	for (int i = 0; i < l; i++)
 	{
 		std::cout << arr[i] << " ";
 	}
+	std::cout << std::endl;
+}
+
+int binarysearch(int *arr, int item, int low, int high)
+{
+	if (high <= low)
+		return (item > arr[low]) ? (low + 1) : low;
+
+	int mid = (low + high)/2;
+
+	if (item == arr[mid])
+		return mid+1;
+
+	if (item > arr[mid])
+		return binarysearch(arr, item, mid+1, high);
+	return binarysearch(arr, item, low, mid-1);
 }

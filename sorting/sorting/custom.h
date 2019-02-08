@@ -6,14 +6,16 @@
 #include <ctime>
 
 
-int* getradomarray(int x);
+int* getradomarray(int);
 
 
-float mtime(void(*f)(int*, int), int *arr, int l);
+float mtime(void(*)(int*, int), int *, int );
 
-void swap(int &a, int &b);
+void swap(int &, int &);
 
-void printarr(int *arr, int l);
+void printarr(int *, int);
+
+int binarysearch(int *, int, int, int);
 
 
 #endif //CUSTOM_H
