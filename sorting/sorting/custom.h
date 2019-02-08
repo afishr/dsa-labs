@@ -5,7 +5,6 @@
 #include <random>
 #include <ctime>
 
-
 int* getradomarray(int);
 
 float mtime(void(*)(int*, int), int *, int );
