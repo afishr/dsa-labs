@@ -8,8 +8,9 @@
 
 int* getradomarray(int);
 
-
 float mtime(void(*)(int*, int), int *, int );
+
+float mtime(void(*)(int*, int, int), int *, int, int);
 
 void swap(int &, int &);
 

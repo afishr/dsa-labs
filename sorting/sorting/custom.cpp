@@ -7,12 +7,15 @@
 
 int* getradomarray(int x)
 {
+	int max = 10000;
+	int min = 0;
+
 	srand(time(nullptr));
 	int *a = new int[x];
 
 	for (int i = 0; i < x; i++)
 	{
-		a[i] = 0 + rand() % 500;
+		a[i] = min + rand() % (max - min);
 	}
 
 	return a;
@@ -24,6 +27,17 @@ float mtime(void(*f)(int*, int), int *arr, int l)
 	(*f)(arr, l);
 	float finish = ((float)(clock() - init) / CLOCKS_PER_SEC);
 	
+	printf("\a");
+
+	return finish;
+}
+
+float mtime(void(*f)(int*, int, int), int *arr, int l, int r)
+{
+	time_t init = clock();
+	(*f)(arr, l, r);
+	float finish = ((float)(clock() - init) / CLOCKS_PER_SEC);
+
 	printf("\a");
 
 	return finish;
