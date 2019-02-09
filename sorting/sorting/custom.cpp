@@ -74,3 +74,12 @@ int binarysearch(int *arr, int item, int low, int high)
 		return binarysearch(arr, item, mid+1, high);
 	return binarysearch(arr, item, low, mid-1);
 }
+
+int getmax(int *arr, int n)
+{
+	int mx = arr[0];
+	for (int i = 1; i < n; i++)
+		if (arr[i] > mx)
+			mx = arr[i];
+	return mx;
+}

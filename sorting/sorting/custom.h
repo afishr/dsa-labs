@@ -17,5 +17,7 @@ void printarr(int *, int);
 
 int binarysearch(int *, int, int, int);
 
+int getmax(int *, int);
+
 
 #endif //CUSTOM_H
